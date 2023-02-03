@@ -18,12 +18,14 @@ void loop() {
   Serial.print(celsius);
   Serial.println(" °C");
 
-  digitalWrite(led1_pin, HIGH);
-  digitalWrite(led2_pin, LOW);
-  delay(500);
-  digitalWrite(led1_pin, LOW);
-  digitalWrite(led2_pin, HIGH);
-  delay(500);
+  if(celsius>30){ // if temperature is more than 30, Red LED on
+    digitalWrite(led1_pin, LOW);
+    digitalWrite(led2_pin, HIGH);
+  } else { // if temperature is 30 or less, Green LED on
+    digitalWrite(led1_pin, HIGH);
+    digitalWrite(led2_pin, LOW);
+  }
+  delay(1000); // wait for 1 second
 }
 
 
