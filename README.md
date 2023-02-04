@@ -1,4 +1,4 @@
-# Arduino IoT Training using UNO with WiFiShield by CikguFadzli
+# Arduino IoT Training using UNO with WiFiShield
 
 This is my code for MQTT connection using ESP8266 Cytron WiFi Shield to HiveMQ MQTT broker
 
@@ -14,3 +14,5 @@ This is my code for MQTT connection using ESP8266 Cytron WiFi Shield to HiveMQ M
 2. Arduino JSON : https://github.com/bblanchon/ArduinoJson
 
 HiveMQ MQTT is used as public broker (https://www.hivemq.com).
+
+Prepared by <a href='www.efadzli.com'>CikguFadzli</a>
