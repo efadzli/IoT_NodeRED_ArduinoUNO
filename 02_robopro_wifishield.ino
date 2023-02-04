@@ -1,11 +1,17 @@
 /*
+Arduino Training Series by Cikgu Fadzli
+IoT with Node-RED
 MQTT Connection using WiFi Shield 
+This code can be downloaded from https://github.com/efadzli/arduino_iot_wifishield
+
 Original code from https://github.com/zakibakar75/MyMQTT_Dioty_Connection_JSON_ESP8266_WiFiESP_library
+Thank you to zakibakar75 for the solution
+This code is using PubSubClient library instead of Cytron ESP8266
 */
 
 #include "WiFiEsp.h"
-#include <ArduinoJson.h>
 #include <PubSubClient.h>
+#include <ArduinoJson.h>
 
 // Emulate Serial1 on pins 2/3 if not present
 #ifndef HAVE_HWSERIAL1
@@ -19,10 +25,10 @@ PubSubClient mqttClient(client);
 //VARIABLES
 #define WIFI_SSID             "ENTER_YOUR_WIFI_SSID_HERE"
 #define WIFI_PASSWORD         "ENTER_YOUR_WIFI_PASSWORD_HERE"
-#define MQTT_HOST             "broker.hivemq.com"
 #define MQTT_PUBLISH_TOPIC    "RoboPRO_YourPhoneNo/iot/weather"
 #define MQTT_SUBSCRIBE_TOPIC1    "RoboPRO_YourPhoneNo/iot/led1"
 #define MQTT_SUBSCRIBE_TOPIC2    "RoboPRO_YourPhoneNo/iot/led2"
+#define MQTT_HOST             "broker.hivemq.com"
 
 unsigned long lastMillis = 0;
 int status = WL_IDLE_STATUS;      // the Wifi radio's status
@@ -62,7 +68,6 @@ void callback(char* topic, byte* payload, unsigned int length) {
 }
 
 void connecttomqtt() {
-
   Serial.println("Connect to MQTT server >>>");
   // Loop until we're reconnected
   while (!mqttClient.connected()) {
