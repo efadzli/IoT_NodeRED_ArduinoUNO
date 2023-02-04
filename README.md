@@ -15,4 +15,4 @@ This is my code for MQTT connection using ESP8266 Cytron WiFi Shield to HiveMQ M
 
 HiveMQ MQTT is used as public broker (https://www.hivemq.com).
 
-Prepared by <a href='www.efadzli.com'>CikguFadzli</a>
+Prepared by <a href='http://www.efadzli.com'>CikguFadzli</a>
